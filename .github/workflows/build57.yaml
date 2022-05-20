@@ -13,9 +13,6 @@ env:
 
 jobs:
   build:
-    strategy:
-      matrix:
-        platform: [linux/arm64, linux/amd64]
     name: Build image
     runs-on: ubuntu-latest
     steps:
@@ -38,4 +35,5 @@ jobs:
           push: true
           tags: ghcr.io/${{ github.repository }}:${{ env.IMAGE_TAG }}
           platforms: |
-            ${{ matrix.platform }}
+            linux/arm64
+            linux/amd64
