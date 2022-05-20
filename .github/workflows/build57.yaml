@@ -1,4 +1,4 @@
-name: Build MySQL57 Images
+name: MySQL57
 on:
   workflow_dispatch:
   push:
